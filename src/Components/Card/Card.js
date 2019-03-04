@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Card.css';
 
 class Card extends Component {
     render() {
         return (
             <div className="github-profile">
-                <img src="https://placehold.it/75" alt=""/>
+                <img src={this.props.avatar_url} alt=""/>
                 <div className="info">
-                    <div className="name">Name here...</div>
-                    <div className="company">Company here..</div>
+                    <div className="name">{this.props.name}</div>
+                    <div className="company">{this.props.company}</div>
                 </div>
             </div>
         );
